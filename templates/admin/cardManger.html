@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>批量销售</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/matrix-style.css" />
+    <link rel="stylesheet" href="../css/matrix-media.css" />
+    <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="icon" href="favicon.ico" type="image/gif" />
+    <!--[if lt IE 9]>
+    <script src="../js/jshtml5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!--Header-part-->
+<div id="header">
+    <h1><a href="#">后台管理系统</a></h1>
+</div>
+<!--close-Header-part-->
+
+<!--top-Header-menu-->
+<div id="user-nav">
+    <ul class="nav">
+        <li class=""><a title="" href="#"><span class="glyphicon glyphicon-lock" aria-hidden="true"> </span><span class="text">修改密码</span></a></li>
+        <li class=""><a title="" href="login.html"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"> </span><span class="text">退出登录</span></a></li>
+    </ul>
+
+</div>
+<!--sidebar-menu-->
+<div id="sidebar"> <a class="hidden" href="#"><span class="glyphicon glyphicon-list"> </span>系统菜单</a>
+    <ul>
+        <li class="submenu">
+            <a href="#">
+                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"> </span>
+                <span>卡销售</span>
+            </a>
+            <ul>
+                <li><a href="cardSale.html">单卡销售</a></li>
+                <li><a href="cardsSale.html">批量销售</a></li>
+            </ul>
+        </li>
+        <li class="">
+            <a title="" href="cardChang.html">
+                <span class="glyphicon glyphicon-transfer" aria-hidden="true"> </span>
+                <span class="text">换卡</span>
+            </a>
+        </li>
+        <li class="submenu">
+            <a href="carFill.html">
+                <span class="glyphicon glyphicon-erase" aria-hidden="true"> </span>
+                <span>补卡</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!--end-sidebar-menu-->
+<!--containt-part-->
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb">
+            <a data-original-title="Go to Home" href="#" title="" class="tip-bottom">
+                <span class="glyphicon glyphicon-home" aria-hidden="true"> </span> 首页
+            </a>
+            <a href="#" class="">售卡</a>
+            <a href="#" class="current">批量销售</a>
+        </div>
+    </div>
+    <div class="widget-box">
+        <div class="widget-title"> <span class="icon"> <span class="glyphicon glyphicon-th"> </span></span>
+            <h5>批量售卡管理</h5>
+        </div>
+        <div class="widget-content nopadding">
+            <div class="container-fluid">
+                <form action="">
+                    <div class="widget-box">
+                        <div class="widget-title"> <span class="icon"> <span class="glyphicon glyphicon-search"> </span></span>
+                            <h5 data-toggle="collapse" data-target="#demo">批量查询</h5>
+                        </div>
+                        <div id="demo" class="collapse in widget-content">
+                            <form name="" id="" method="">
+                                <div class="row formline">
+                                    <label for="" class="col-xs-1 formline-label">交易类型：</label>
+                                    <div class="col-xs-2">
+                                        <select class="form-control">
+                                            <option selected="">--请选择--</option>
+                                            <option class="l-iconsbg">单卡销售</option>
+                                            <option class="l-iconsbg">批量销售</option>
+                                            <option class="l-iconsbg">补卡</option>
+                                            <option class="l-iconsbg">换卡</option>
+                                        </select>
+                                    </div>
+                                    <label for="" class="col-xs-1 formline-label">开始：</label>
+                                    <div class="col-xs-3">
+                                        <div data-link-format="yyyy-mm-dd" data-link-field="dtp_input2" data-date-format="" data-date="" class="input-group date form_date">
+                                            <input readonly="" value="" size="16" class="form-control" type="text">
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                        </div>
+                                    </div>
+                                    <label for="" class="col-xs-1 formline-label">结束：</label>
+                                    <div class="col-xs-3">
+                                        <div data-link-format="yyyy-mm-dd" data-link-field="dtp_input2" data-date-format="" data-date="" class="input-group date form_date">
+                                            <input readonly="" value="" size="16" class="form-control" type="text">
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-1">
+                                        <button type="submit" class="btn btn-info pull-right">查询</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="widget-box">
+                        <div class="widget-title"> <span class="icon"> <span class="glyphicon glyphicon-th"> </span></span>
+                            <h5>查询结果</h5>
+                        </div>
+                        <div class="widget-content nopadding check-operat">
+                            <table class="table table-striped table-hover data-table table-form-my">
+                                <thead>
+                                <tr>
+                                    <th>卡号</th>
+                                    <th>面值</th>
+                                    <th>余额</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="gradeX">
+                                    <td><input class="form-control" type="text" value=""></td>
+                                    <td><input class="form-control" type="text" value=""></td>
+                                    <td><input class="form-control" type="text" value=""></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="enter-box"><button class="btn btn-primary pull-right" type="button">确定</button></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end-containt-part-->
+
+
+<!--Footer-part-->
+<div class="row-fluid">
+    <div id="footer" class="span12"> Copyright &copy; Goonic All rights reserved.</div>
+</div>
+<!--end-Footer-part-->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/matrix.js"></script>
+<script src="../js/table-my.js"></script>
+<script src="../js/bootstrap-datetimepicker.min.js"></script>
+<script src="../js/bootstrap-datetimepicker.zh-CN.js"></script>
+
+<script type="text/javascript">
+    $('.form_date').datetimepicker({
+        format: "yyyy-mm-dd hh:ii",
+        language: 'zh-CN',
+        weekStart: 1,
+        todayBtn: 1,
+        autoclose: true,
+        todayHighlight: true,
+        startView: 2,
+        minView: 2,
+        forceParse: 0
+    });
+</script>
+</body>
+</html>
